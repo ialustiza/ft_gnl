@@ -27,15 +27,11 @@ char	*ft_strchr(const char *s, int c)
 	while (*s)
 	{
 		if (*s == (unsigned char) c)
-		{
 			return ((char *)s);
-		}
 		s++;
 	}
 	if ((unsigned char)c == '\0')
-	{
 		return ((char *)s);
-	}
 	return (NULL);
 }
 
@@ -63,9 +59,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	size = len;
 	if (ft_strlen(s) < start || !*s)
-	{
 		return (NULL);
-	}
 	ptr = malloc(sizeof(char) * (len + 1));
 	if (!ptr)
 		return (NULL);
